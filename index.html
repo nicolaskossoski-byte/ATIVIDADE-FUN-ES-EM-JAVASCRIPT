@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Curiosidades de Tecnologia</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f0f2f5;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .cartao {
+      background-color: #ffffff;
+      padding: 30px;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      text-align: center;
+      max-width: 400px;
+    }
+
+    h1 {
+      color: #1a73e8;
+      font-size: 1.8rem;
+      margin-bottom: 15px;
+    }
+
+    .mensagem {
+      font-size: 1.1rem;
+      color: #555555;
+      margin-bottom: 25px;
+      min-height: 60px;
+    }
+
+    .botao {
+      background-color: #1a73e8;
+      color: #ffffff;
+      border: none;
+      padding: 12px 24px;
+      font-size: 1rem;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s;
+    }
+
+    .botao:hover {
+      background-color: #1557b0;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="cartao">
+    <h1>Tecnologia & Curiosidades</h1>
+    <p class="mensagem">Clique no botão abaixo para descobrir uma curiosidade!</p>
+    <button class="botao">Revelar Curiosidade</button>
+  </div>
+
+  <script>
+    const botao = document.querySelector(".botao");
+    const mensagem = document.querySelector(".mensagem");
+
+    function revelarCuriosidade() {
+      mensagem.textContent = "💻 Você sabia? O primeiro 'bug' de computador foi uma mariposa de verdade encontrada presa num relé em 1947!";
+      mensagem.style.color = "#0d6efd";
+      mensagem.style.fontWeight = "bold";
+    }
+
+    botao.addEventListener("click", revelarCuriosidade);
+  </script>
+
+</body>
+</html>
